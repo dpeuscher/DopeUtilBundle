@@ -3,7 +3,7 @@
 namespace Dope\UtilBundle\Cache;
 
 /**
- * @category  evernote
+ * @category  util
  * @copyright Copyright (c) 2017 CHECK24 Vergleichsportal Flüge GmbH
  */
 interface CalculationCacheInterface

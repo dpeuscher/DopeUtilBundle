@@ -1,0 +1,23 @@
+{
+    "name": "dope/utilbundle",
+    "description": "Utilities that do not fit into their own bundle",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Dominik Peuscher",
+            "email": "dpeuscher@gmail.com"
+        }
+    ],
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "symfony/symfony": "3.3.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Dope\\UtilBundle": ""
+        }
+    },
+    "target-dir": "Dope/UtilBundle"
+}

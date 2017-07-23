@@ -1,5 +1,14 @@
 services:
-    Dope\GolemParserBundle\Services\:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Dope\UtilBundle\Services\:
         resource: '../../Services/*'
         exclude: '../../Services/{Exceptions}'
+        public: true
+
+    Dope\UtilBundle\Services\UrlContentCacheService:
+        arguments:
+            $cacheFolder: '%cache_dir%'
         public: true

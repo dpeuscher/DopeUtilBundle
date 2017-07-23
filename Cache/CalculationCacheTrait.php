@@ -10,6 +10,11 @@ trait CalculationCacheTrait
     protected $useCalculationCache = false;
 
     /**
+     * @var int
+     */
+    protected $cacheSize = 100;
+
+    /**
      * @var mixed[]
      */
     protected $calculationCache = [];
@@ -62,6 +67,9 @@ trait CalculationCacheTrait
     {
         if ($this->useCalculationCache) {
             if (!isset($this->calculationCache[$key])) {
+                if ($this->calculationCache >= $this->cacheSize) {
+                    array_shift($this->calculationCache);
+                }
                 $this->calculationCache[$key] = $method();
             }
             return $this->calculationCache[$key];
